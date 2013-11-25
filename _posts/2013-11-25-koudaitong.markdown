@@ -27,6 +27,4 @@ categories: koudaitong
 
 #联系方式：
 
-扣扣：`1162269959`
-
 邮箱：`ray@tomo.im`
