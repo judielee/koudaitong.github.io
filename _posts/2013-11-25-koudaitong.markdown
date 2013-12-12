@@ -27,7 +27,7 @@ categories: koudaitong
 
 * 我们目前基于 [RequireJS](http://requirejs.org/) 来进行模块化开发, 使用了 [Backbone](http://backbonejs.org/)、[Underscore](http://underscorejs.org/) 等类库。
 
-* 目前我们的后台系统只针对 Chrome 浏览器开发（说道浏览器兼容，肯定很多前端同学伤痕累累)。除了后台页面，我们还有移动版、PC 版前台页面，在口袋通你可以用最先进的 HTML5 以及 CSS3 技术来实现牛逼的效果。
+* 目前我们的后台系统只针对 Chrome 浏览器开发（说到浏览器兼容，肯定很多前端同学伤痕累累)。除了后台页面，我们还有移动版、PC 版前台页面，在口袋通你可以用最先进的 HTML5 以及 CSS3 技术来实现牛逼的效果。
 
 * 在这里，有个极速发展的大舞台等着你来搭建！在这里，你不是一个可有可无的螺丝钉！！骚年，来一起改变世界吧！
 
