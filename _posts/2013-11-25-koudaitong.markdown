@@ -12,6 +12,8 @@ categories: koudaitong
 
 **推荐成功即送 iPad mini with Retina display 或者等值现金**
 
+ps: 推荐成功真的送 iPad，不信的上微博找老板 @白鸦
+
 ##我们是谁
 
 目前我们在做基于SAAS平台的社会化的CRM（微店铺+微粉丝营销），简单而言就是帮商家（目前是中小电商）管理他们的客户，服务客户，并能通过各类营销手段，产生交易获得订单，目前基于微信和微博的已经完成了初版，围观地址： [http://koudaitong.com](http://koudaitong.com)。
@@ -41,7 +43,9 @@ categories: koudaitong
 ###iOS、Andriod工程师
 
 * 良好的计算机基础，1年以上手机开发经验，精通 C/C++/Object C 编程，熟悉多线程，掌握 iOS / Android 平台特性。
+
 * 在App Store发布过App。
+
 * 能够独立完成一个App的开发、测试、发布流程。
 
 ##我们能为你提供什么
