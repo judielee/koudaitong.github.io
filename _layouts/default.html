@@ -24,19 +24,6 @@
         <![endif]-->
     </head>
     <body>
-      <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-        <div class="container">
-          <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a href="/" class="navbar-brand">{{ site.name }}</a>
-          </div>
-        </div>
-      </header>
       <div class="job-header">
         <div class="container">
           <h1>口袋通是什么？</h1>
@@ -48,10 +35,40 @@
           {{ content }}
         </div>
       </div>
+      <footer role="contentinfo">
+        <div class="container">
+          <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+          <p>Maintained by the <a href="http://koudaitong.com">Koudaitong</a> with the help of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+          <p>Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        </div>
+      </footer>
       <script src="//cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
       <!-- Latest compiled and minified JavaScript -->
       <script src="//cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <script>
+        var $window = $(window);
+        var $body   = $(document.body);
+        $body.scrollspy({
+          target: '.js-sidebar'
+        });
 
+        $window.on('load', function () {
+          $body.scrollspy('refresh')
+        });
+
+        var $sideBar = $('.js-sidebar');
+        $sideBar.affix({
+          offset: {
+            top: function() {
+              var offsetTop      = $sideBar.offset().top
+              var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
+              var navOuterHeight = $('#top').height()
+
+              return (this.top = offsetTop - navOuterHeight - sideBarMargin)
+            }
+          }
+        });
+      </script>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -4,9 +4,12 @@ title: 口袋通招聘
 ---
 <div class="col-md-9" role="main">
   {% for category in site.categories %}
+    <h2 id="category-{{ category | first }}" class="page-header">
+      {{ category | first }}
+    </h2>
     {% for posts in category %}
       {% for post in posts %}
-      <div id="{{ post.title }}">
+      <div id="job-{{ post.title }}">
         {{ post.content }}
       </div>
       {% endfor %}
@@ -14,15 +17,15 @@ title: 口袋通招聘
   {% endfor %}
 </div>
 <div class="col-md-3">
-  <div class="sidebar affix">
-    <ul class="nav">
+  <div class="sidebar js-sidebar">
+    <ul class="nav sidebar-nav">
     {% for category in site.categories %}
     <li>
-      <a href="#">{{ category | first }}</a>
+      <a href="#category-{{ category | first }}">{{ category | first }}</a>
       <ul class="nav">
         {% for posts in category %}
           {% for post in posts %}
-            <li><a href="#{{ post.title }}">{{ post.title }}</a></li>
+            <li><a href="#job-{{ post.title }}">{{ post.title }}</a></li>
           {% endfor %}
         {% endfor %}
       </ul>
