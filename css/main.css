@@ -3,6 +3,7 @@
   padding: 30px 15px;
   color: #CDBFE3;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
   background-color: #6F5499;
   background-image: -webkit-linear-gradient(top,#563D7C 0,#6F5499 100%);
   background-image: linear-gradient(to bottom,#563D7C 0,#6F5499 100%);
@@ -13,8 +14,15 @@
   margin-top: 0;
   color: #FFF;
 }
-.job-header p {
-  margin-right: 380px;
+
+@media (min-width: 992px) {
+  .job-header {
+    text-align: left;
+  }
+  .job-header h1,
+  .job-header p {
+    margin-right: 380px;
+  }
 }
 
 .sidebar.affix {
