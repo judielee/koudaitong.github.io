@@ -1,10 +1,33 @@
 ---
 layout: default
-title: 口袋通官方招聘网站
+title: 口袋通招聘
 ---
-
-<div id="home">
-  <div class="post">
-      {{ site.posts[0].content }}
+<div class="col-md-9" role="main">
+  {% for category in site.categories %}
+    {% for posts in category %}
+      {% for post in posts %}
+      <div id="{{ post.title }}">
+        {{ post.content }}
+      </div>
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+</div>
+<div class="col-md-3">
+  <div class="sidebar affix">
+    <ul class="nav">
+    {% for category in site.categories %}
+    <li>
+      <a href="#">{{ category | first }}</a>
+      <ul class="nav">
+        {% for posts in category %}
+          {% for post in posts %}
+            <li><a href="#{{ post.title }}">{{ post.title }}</a></li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+    </ul>
   </div>
 </div>
