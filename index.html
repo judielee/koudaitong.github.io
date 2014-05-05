@@ -9,9 +9,11 @@ title: 口袋通招聘
     </h2>
     {% for posts in category %}
       {% for post in posts %}
-      <div id="job-{{ post.title }}">
-        {{ post.content }}
-      </div>
+        {% if post.title %}
+        <div id="job-{{ post.title }}">
+          {{ post.content }}
+        </div>
+        {% endif %}
       {% endfor %}
     {% endfor %}
   {% endfor %}
@@ -25,7 +27,9 @@ title: 口袋通招聘
       <ul class="nav">
         {% for posts in category %}
           {% for post in posts %}
+            {% if post.title %}
             <li><a href="#job-{{ post.title }}">{{ post.title }}</a></li>
+            {% endif %}
           {% endfor %}
         {% endfor %}
       </ul>
